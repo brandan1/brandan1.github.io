@@ -30,8 +30,9 @@ body {
     margin: 0;
     padding: 0;
 
-    background: url("../images/landpage-colored-vertical-sidebars.png") repeat-y,
-                url("../images/landpage-colored-vertical-sidebars.png") repeat-y right top,
+    background: url("../images/landpage-colored-vertical-sidebar.png") repeat-y,
+                url("../images/landpage-colored-vertical-sidebar.png") repeat-y right top,
+                url("../images/landpage-colored-horizontal-sidebar.png") repeat-x,
                 #ff4d67;
 }
 
