@@ -76,10 +76,19 @@ body {
         
         background-image: none;
         background: url("../images/landpage-header-divider.png") no-repeat center 97%/50vw 8px;
+    }
+}
 
+@media screen and (min-height: 785px) and (max-width: 850px) {
+    #zen-intro header h1 {
         word-spacing: 100vw; /* causes line break after every word due to large space between words */
     }
 }
+
+@media screen and (max-width: 820px) {
+    #zen-intro header h1 {
+        font-size: 8vw;
+    }
 
 @media screen and (max-width: 530px) {
     #zen-intro header h2 {
