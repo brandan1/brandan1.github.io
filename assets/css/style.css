@@ -33,6 +33,7 @@ body {
     background: url("../images/landpage-colored-vertical-sidebar.png") repeat-y,
                 url("../images/landpage-colored-vertical-sidebar.png") repeat-y right top,
                 url("../images/landpage-colored-horizontal-sidebar.png") repeat-x,
+                url("../images/landpage-scrollmore.png") no-repeat center 85%,
                 url("../images/landpage-divider.png") repeat-x left bottom,
                 #ff4d67;
 }
@@ -95,3 +96,23 @@ body {
         font-size: 0.9em;
     }
 }
+
+@media screen and (max-height: 535px) {
+    #zen-intro header h1 {
+        padding-top: 20vh;
+    }
+}
+
+@media screen and (max-height: 370px) {
+    #zen-intro header {
+        padding-top: 5vh;
+
+        background-image: none; /* view-more button is redudant at this point, though it should be removed already at a higher height than this */
+        background: url("../images/landpage-colored-vertical-sidebar.png") repeat-y,
+        url("../images/landpage-colored-vertical-sidebar.png") repeat-y right top,
+        url("../images/landpage-colored-horizontal-sidebar.png") repeat-x,
+        url("../images/landpage-divider.png") repeat-x left bottom,
+        #ff4d67;
+    }
+}
+
