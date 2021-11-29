@@ -46,9 +46,15 @@ body {
 
 #zen-intro header h1 {
     padding-top: 33.3vh;
+    padding-bottom: 1.57vh;
+    /* padding-top: 20%;
+    padding-bottom: 1%; */
+
+    background: url("../images/landpage-header-divider.png") no-repeat center 97%; /* using percentage here instead because it needs to be based relative to the h1 in header rather than the dimensions of the viewport */
 
     font-weight: normal;
-    font-size: 5em;
+    /* font-size: 7em; */
+    font-size: 7vw;
     letter-spacing: 0.1em;
 }
 
@@ -57,9 +63,20 @@ body {
     font-family: BLACK_BUBBLE;
 }
 
+@media screen and (max-width: 1115px) {
+    #zen-intro header h1 {
+        font-size: 5em;
+    }
+}
+
 @media screen and (max-width: 850px) {
     #zen-intro header h1 {
         padding-top: 25vh;
+        
+        background-image: none;
+        background: url("../images/landpage-header-divider.png") no-repeat center 97%/50vw 8px;
+
         word-spacing: 100vw; /* causes line break after every word due to large space between words */
     }
 }
+
