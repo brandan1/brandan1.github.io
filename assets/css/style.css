@@ -80,3 +80,18 @@ body {
     }
 }
 
+@media screen and (max-width: 530px) {
+    #zen-intro header h2 {
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    #zen-intro header h1 {
+        font-size: 3.7em;
+    }
+
+    #zen-intro header h2 {
+        font-size: 0.9em;
+    }
+}
