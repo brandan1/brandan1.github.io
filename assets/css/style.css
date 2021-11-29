@@ -49,6 +49,7 @@ body {
 
     font-weight: normal;
     font-size: 5em;
+    letter-spacing: 0.1em;
 }
 
 #zen-intro header h2, #zen-intro header h2 abbr { /* have to do abbr aswell because of global rule for font */
@@ -56,9 +57,9 @@ body {
     font-family: BLACK_BUBBLE;
 }
 
-@media screen and (max-width: 715px) {
+@media screen and (max-width: 850px) {
     #zen-intro header h1 {
-        padding-top: 27vh;
+        padding-top: 25vh;
         word-spacing: 100vw; /* causes line break after every word due to large space between words */
     }
 }
