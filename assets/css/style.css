@@ -58,6 +58,7 @@ body {
 
 @media screen and (max-width: 715px) {
     #zen-intro header h1 {
+        padding-top: 27vh;
         word-spacing: 100vw; /* causes line break after every word due to large space between words */
     }
 }
