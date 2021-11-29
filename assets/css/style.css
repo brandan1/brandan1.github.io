@@ -33,6 +33,7 @@ body {
     background: url("../images/landpage-colored-vertical-sidebar.png") repeat-y,
                 url("../images/landpage-colored-vertical-sidebar.png") repeat-y right top,
                 url("../images/landpage-colored-horizontal-sidebar.png") repeat-x,
+                url("../images/landpage-divider.png") repeat-x left bottom,
                 #ff4d67;
 }
 
