@@ -13,6 +13,10 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+html {
+    font-size: 16px; /* Base font-size */
+}
+
 body {
     background-color: #ffd5a1;
 }
@@ -33,7 +37,7 @@ body {
     background: url("../images/landpage-colored-vertical-sidebar.png") repeat-y,
                 url("../images/landpage-colored-vertical-sidebar.png") repeat-y right top,
                 url("../images/landpage-colored-horizontal-sidebar.png") repeat-x,
-                url("../images/landpage-scrollmore.png") no-repeat center 85%,
+                url("../images/landpage-scrollmore.png") no-repeat center 80%,
                 url("../images/landpage-divider.png") repeat-x left bottom,
                 #ff4d67;
 }
@@ -55,51 +59,99 @@ body {
 
     font-weight: normal;
     /* font-size: 7em; */
-    font-size: 7vw;
-    letter-spacing: 0.1em;
+    /* font-size: 7vw; */
+    /* font-size: 6.5rem;
+    letter-spacing: 0.8rem; */
 }
 
 #zen-intro header h2, #zen-intro header h2 abbr { /* have to do abbr aswell because of global rule for font */
     font-weight: normal;
-    font-size: 2vw;
+    /* font-size: 2vw; */
     font-family: BLACK_BUBBLE;
 }
 
-@media screen and (max-width: 885px) {
+@media screen and (min-width: 0px) {
     #zen-intro header h1 {
         background-image: none;
-        background: url("../images/landpage-header-divider.png") no-repeat center 97%/65vw 8px;
-        /* background-size: 35% auto; */
-        font-size: 3.8em;
+        background: url("../images/landpage-header-divider.png") no-repeat center 98%/50vw 5px;
+
+        font-size: 1.7rem;
     }
 
-    #zen-intro header h2, #zen-intro header h2 abbr {
-        font-size: 1.1em;
+    #zen-intro header h2, #zen-intro header abbr {
+        font-size: 0.7rem;
     }
 }
 
-@media screen and (max-width: 675px) {
+@media screen and (min-width: 400px) {
     #zen-intro header h1 {
-        padding-top: 27vh;
-        word-spacing: 100vw; /* causes line break after every word due to large space between words */
+        background-image: none;
+        background: url("../images/landpage-header-divider.png") no-repeat center 98%/50vw 5px;
+
+        font-size: calc(1rem + 5vw);
+    }
+
+    #zen-intro header h2, #zen-intro header abbr {
+        font-size: calc(1rem + 0.1vw);
     }
 }
 
-@media screen and (max-height: 700px) {
+@media screen and (min-width: 630px) {
+    #zen-intro header h1 {
+        background-image: none;
+        background: url("../images/landpage-header-divider.png") no-repeat center 97%/50vw 8px;
+
+        font-size: calc(1rem + 8vw);
+    }
+
+    #zen-intro header h2, #zen-intro header abbr {
+        font-size: calc(1rem + 1vw);
+    }
+}
+
+@media screen and (min-width: 1001px) {
+    #zen-intro header h1 {
+        font-size: 7rem;
+    }
+
+    #zen-intro header h2, #zen-intro header abbr {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 385px) and (max-height: 350px) {
     #zen-intro header {
-        /* padding-top: 5vh; */
-
-        background-image: none; /* view-more button is redudant at this point, though it should be removed already at a higher height than this */
+        background-image: none;
         background: url("../images/landpage-colored-vertical-sidebar.png") repeat-y,
-        url("../images/landpage-colored-vertical-sidebar.png") repeat-y right top,
-        url("../images/landpage-colored-horizontal-sidebar.png") repeat-x,
-        url("../images/landpage-divider.png") repeat-x left bottom,
-        #ff4d67;
+                    url("../images/landpage-colored-vertical-sidebar.png") repeat-y right top,
+                    url("../images/landpage-colored-horizontal-sidebar.png") repeat-x,
+                    url("../images/landpage-divider.png") repeat-x left bottom,
+                    #ff4d67;
     }
 }
 
-@media screen and (max-height: 700px) and (max-width: 675px) {
-    #zen-intro header h1 {
-        padding-top: 14vh;
+@media screen and (min-width: 400px) and (max-height: 660px) {
+    #zen-intro header {
+        background-image: none;
+        background: url("../images/landpage-colored-vertical-sidebar.png") repeat-y,
+                    url("../images/landpage-colored-vertical-sidebar.png") repeat-y right top,
+                    url("../images/landpage-colored-horizontal-sidebar.png") repeat-x,
+                    url("../images/landpage-divider.png") repeat-x left bottom,
+                    #ff4d67;
     }
 }
+
+/* @media screen and (max-width: 360px) {
+    #zen-intro header h1 {
+        background-image: none;
+        background: url("../images/landpage-header-divider.png") no-repeat center 98%/50vw 5px;
+
+        word-spacing: 100vw;
+    }
+} */
+
+/* @media screen and (max-width: 700px) {
+    #zen-intro header h1 {
+        font-size: 3em;
+    }
+} */
