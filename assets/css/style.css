@@ -73,7 +73,7 @@ body {
         font-size: 3.8em;
     }
 
-    #zen-intro header h2 {
+    #zen-intro header h2, #zen-intro header h2 abbr {
         font-size: 1.1em;
     }
 }
