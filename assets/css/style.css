@@ -144,27 +144,32 @@ body {
 /* Summary Box */
 
 #zen-summary {
-    width: 60vw;
-    min-height: 244.8px;
-    max-height: 244.8px;
-    margin: 1rem auto;
+    width: 100%;
+    height: 350px;
+    /* margin: 1rem auto; */
+    border: 5px solid #52445F;
+    padding: 1rem;
     position: relative;
-
-    background: url("../images/summary-box-picture.png") no-repeat left top/255px 244.8px,
+    
+    background: url("../images/summary-box-background.jpg") no-repeat left top/cover,
         #c9baa8;
 }
 
 #zen-summary p {
-    padding-top: 1rem;
-    padding-left: 16.56rem;
-    position: absolute;
+    display: inline;
 
-    font-size: 1.5rem;
-    letter-spacing: 0.1rem;
+    background-color: #000;
+
+    color: #FFF;
+    font-size: calc(1rem + 1.4vw);
+    line-height: 1.3em;
+    letter-spacing: 0.3rem;
 }
 
 #zen-summary p:nth-child(2) {
+    position: absolute;
     bottom: 1rem;
+    left: 1rem;
 }
 
 #zen-summary p a {
@@ -175,60 +180,8 @@ body {
     text-transform: uppercase;
 }
 
-#zen-summary p a:hover {
-    text-decoration: black underline dotted;
-}
-
-@media screen and (max-width: 514px) {
+@media screen and (max-width: 875px) {
     #zen-summary {
-        width: 100%;
-        margin: 0;
-        padding: 1rem;
-        border: 5px solid #52445F;
-
-        background-image: none;
-        background: url('../images/summary-box-background.jpg') no-repeat left top/cover,
-        #c9baa8;
-
-        color: white;
-    }
-
-    #zen-summary p {
-        margin: 0;
-        padding: 0;
-        padding-right: 1rem;
-        
-        background-color: #000;
-
-        font-size: calc(1rem + 0.4vw);
-    }
-
-}
-
-@media screen and (min-width: 515px) {
-    #zen-summary {
-        width: 100%;
-        margin-top: 0;
-    }
-
-    #zen-summary p {
-        font-size: calc(1rem + 0.4vw);
-    }
-
-}
-
-@media screen and (min-width: 880px) {
-    #zen-summary {
-        width: 100%;
-        margin-top: 0;
-    }
-
-
-}
-
-@media screen and (min-width: 1140px) {
-    #zen-summary {
-        width: 60vw;
-        margin-top: 1rem;
+        height: 450px;
     }
 }
