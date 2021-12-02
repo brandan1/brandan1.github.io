@@ -187,7 +187,7 @@ body {
 /* Main Content */
 
 #zen-preamble, #zen-supporting {
-    width: 40%;
+    width: 50%;
     /* margin-left: 200px; */
     margin-left: 10.5%;
     float: left;
@@ -220,6 +220,18 @@ body {
     letter-spacing: 0.1em;
 }
 
+#zen-preamble a, #zen-supporting a {
+    background-color: #ff4d67;
+
+    color: #ffd5a1;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#zen-preamble a:hover, #zen-supporting a:hover {
+    text-decoration: underline dotted #52445f;
+}
+
 
 @media screen and (max-width: 1179) {
     #zen-preamble h3, #zen-supporting h3 {
@@ -236,7 +248,7 @@ aside {
 
 aside .wrapper {
     position: absolute;
-    right: 4%;
+    right: 7%;
 }
 
 /* #cd4666 - two side colors | #52445f - middle color | #ff4d67 main color*/
@@ -261,8 +273,9 @@ aside .wrapper {
     /* padding-left: 15%; */
     color: #ffd5a1;
 
-    font-weight: normal;
     font-style: normal;
+    font-weight: normal;
+    line-height: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
 }
@@ -279,4 +292,16 @@ aside .wrapper {
     text-decoration: none;
     text-transform: uppercase; */
     text-decoration: none;
+}
+
+.select, .archives {
+    padding-bottom: 20px;
+    text-align: center;
+
+    background: url("../temp.png") no-repeat;
+    background-size: 204.8px 102.4px;
+    background-position: center -20px;
+
+    font-weight: normal;
+    letter-spacing: 0.1rem;
 }
