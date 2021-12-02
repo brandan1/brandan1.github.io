@@ -161,7 +161,7 @@ body {
     background-color: #000;
 
     color: #FFF;
-    font-size: calc(1rem + 1.2vw);
+    font-size: calc(1rem + 1vw);
     line-height: 1.3em;
     letter-spacing: 0.3rem;
 }
