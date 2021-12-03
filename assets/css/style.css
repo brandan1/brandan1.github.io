@@ -17,7 +17,8 @@ html {
 }
 
 body {
-    background-color: #ffd5a1;
+    background: url("../images/summary-box-background.jpg") no-repeat left bottom/contain,
+                #FFD5A1;
 }
 
 /* Landpage */
@@ -238,7 +239,12 @@ aside {
 
 /* Footer */
 /* div[role=contentinfo], footer */
-#zen-supporting {
+
+p[role=contentinfo] {
+     
+}
+
+/* #zen-supporting {
     position: relative;
 }
 footer {
@@ -247,7 +253,8 @@ footer {
     margin-right: 10%;
     clear: both;
     float: left;
+    padding-bottom: 400px;
 }
 
 footer a {
-}
+} */
