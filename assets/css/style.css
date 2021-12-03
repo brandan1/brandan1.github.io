@@ -17,7 +17,7 @@ html {
 }
 
 body {
-    background: url("../images/summary-box-background.jpg") no-repeat left bottom/contain,
+    background: /*url("../images/summary-box-background.jpg") no-repeat left bottom/contain,*/
                 #FFD5A1;
 }
 
@@ -136,6 +136,19 @@ body {
     text-transform: uppercase;
 }
 
+@media screen and (max-width: 1025px) {
+    #zen-summary {
+        width: 100%;
+        min-width: 100vw;
+        margin: 1rem 0;
+    }
+
+    #zen-summary p {
+        left: 225px;
+        font-size: calc(1rem + 0.2vw);
+    }
+}
+
 /* Main Content */
 
 #zen-preamble, #zen-supporting {
@@ -166,6 +179,13 @@ body {
     font-weight: normal;
     font-size: 1.2rem;
     letter-spacing: 0.15rem;
+}
+
+@media screen and (max-width: 1025px) {
+    #zen-preamble, #zen-supporting {
+        margin-left: 5%;
+        clear: left;
+    }
 }
 
 /* Aside */
@@ -240,21 +260,36 @@ aside {
 /* Footer */
 /* div[role=contentinfo], footer */
 
+#zen-requirements {
+    /* background: url("../images/summary-box-background.jpg") no-repeat left bottom; */
+}
+
+#zen-requirements p:nth-child(5) {
+    /* margin-bottom: calc(1.5rem + 15vmax); */
+    /* margin-bottom: 250px; */
+}
+
 p[role=contentinfo] {
-     
+    display: inline-block;
+    padding: 2rem;
+    border: 5px solid #52445f;
+
+    background: url("../images/summary-box-background-overlay.png"),
+                url("../images/summary-box-background.jpg") no-repeat left bottom;
+
+    color: #FFF;
+    /* color: #FFF;
+    font-size: calc(1rem + 1vw);
+    line-height: 3em;
+    letter-spacing: 0.3rem; */
 }
 
-/* #zen-supporting {
-    position: relative;
-}
-footer {
-    width: 100%;
-    overflow:visible;
-    margin-right: 10%;
-    clear: both;
-    float: left;
-    padding-bottom: 400px;
-}
+p[role=contentinfo] a {
+    padding: 0 5px;
 
-footer a {
-} */
+    background-color: #ff4d67;
+
+    color: #ffd5a1;
+    text-decoration: none;
+    text-transform: uppercase;
+}
