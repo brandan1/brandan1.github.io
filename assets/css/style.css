@@ -6,10 +6,9 @@
 }
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 
+    font-weight: normal;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -21,18 +20,11 @@ body {
     background-color: #ffd5a1;
 }
 
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
 /* Landpage */
 
 #zen-intro header {
     height: 85vh;
-    margin: 0;
-    padding: 0;
+    text-align: center;
 
     background: url("../images/landpage-colored-vertical-sidebar.png") repeat-y,
                 url("../images/landpage-colored-vertical-sidebar.png") repeat-y right top,
@@ -40,218 +32,151 @@ body {
                 url("../images/landpage-scrollmore.png") no-repeat center 80%,
                 url("../images/landpage-divider.png") repeat-x left bottom,
                 #ff4d67;
+
+    color: #ffd5a1;
 }
 
 #zen-intro header h1, #zen-intro header h2 {
     margin: 0;
-    text-align: center;
-
-    color: #ffd5a1;
 }
 
 #zen-intro header h1 {
     padding-top: 33.3vh;
     padding-bottom: 1.57vh;
-    /* padding-top: 20%;
-    padding-bottom: 1%; */
 
-    background: url("../images/landpage-header-divider.png") no-repeat center 97%; /* using percentage here instead because it needs to be based relative to the h1 in header rather than the dimensions of the viewport */
-
-    font-weight: normal;
-    /* font-size: 7em; */
-    /* font-size: 7vw; */
-    /* font-size: 6.5rem;
-    letter-spacing: 0.8rem; */
+    letter-spacing: 0.3rem;
 }
 
-#zen-intro header h2, #zen-intro header h2 abbr { /* have to do abbr aswell because of global rule for font */
-    font-weight: normal;
-    /* font-size: 2vw; */
+#zen-intro header h2, #zen-intro header h2 abbr {
     font-family: BLACK_BUBBLE;
+}
+
+#zen-intro header h2 abbr {
+    text-decoration: underline dotted #52445F;
 }
 
 @media screen and (min-width: 0px) {
     #zen-intro header h1 {
         background-image: none;
-        background: url("../images/landpage-header-divider.png") no-repeat center 98%/50vw 5px;
+        background: url("../images/landpage-header-divider.png") no-repeat center 98%/calc(100px + 20vw) 5px;
 
-        font-size: 1.7rem;
+        font-size: 1rem;
     }
 
-    #zen-intro header h2, #zen-intro header abbr {
-        font-size: 0.7rem;
+    #zen-intro header h2 {
+        font-size: 0.6rem;
     }
 }
 
 @media screen and (min-width: 400px) {
     #zen-intro header h1 {
         background-image: none;
-        background: url("../images/landpage-header-divider.png") no-repeat center 98%/50vw 5px;
+        background: url("../images/landpage-header-divider.png") no-repeat center 98%/calc(100px + 20vw) 7px;
 
-        font-size: calc(1rem + 5vw);
+        font-size: calc(1rem + 3vw);
     }
 
-    #zen-intro header h2, #zen-intro header abbr {
-        font-size: calc(1rem + 0.1vw);
+    #zen-intro header h2 {
+        font-size: calc(0.6rem + 1vw);
     }
 }
 
-@media screen and (min-width: 630px) {
+@media screen and (min-width: 800px) {
     #zen-intro header h1 {
         background-image: none;
-        background: url("../images/landpage-header-divider.png") no-repeat center 97%/50vw 8px;
+        background: url("../images/landpage-header-divider.png") no-repeat center 97%/calc(100px + 20vw) 7px;
 
-        font-size: calc(1rem + 8vw);
-    }
-
-    #zen-intro header h2, #zen-intro header abbr {
-        font-size: calc(1rem + 1vw);
+        font-size: calc(1rem + 4vw);
     }
 }
 
-@media screen and (min-width: 1001px) {
-    #zen-intro header h1 {
-        font-size: 7rem;
-    }
-
-    #zen-intro header h2, #zen-intro header abbr {
-        font-size: 1.5rem;
-    }
-}
-
-@media screen and (max-width: 385px) and (max-height: 350px) {
+@media screen and (max-height: 500px) {
     #zen-intro header {
         background-image: none;
         background: url("../images/landpage-colored-vertical-sidebar.png") repeat-y,
-                    url("../images/landpage-colored-vertical-sidebar.png") repeat-y right top,
-                    url("../images/landpage-colored-horizontal-sidebar.png") repeat-x,
-                    url("../images/landpage-divider.png") repeat-x left bottom,
-                    #ff4d67;
-    }
-}
-
-@media screen and (min-width: 400px) and (max-height: 660px) {
-    #zen-intro header {
-        background-image: none;
-        background: url("../images/landpage-colored-vertical-sidebar.png") repeat-y,
-                    url("../images/landpage-colored-vertical-sidebar.png") repeat-y right top,
-                    url("../images/landpage-colored-horizontal-sidebar.png") repeat-x,
-                    url("../images/landpage-divider.png") repeat-x left bottom,
-                    #ff4d67;
+        url("../images/landpage-colored-vertical-sidebar.png") repeat-y right top,
+        url("../images/landpage-colored-horizontal-sidebar.png") repeat-x,
+        url("../images/landpage-divider.png") repeat-x left bottom,
+        #ff4d67;
     }
 }
 
 /* Summary Box */
 
 #zen-summary {
-    width: 95%;
-    height: 350px;
+    width: calc(200px - 10vw);
+    min-width: 1000px;
+    min-height: 200px;
     margin: 1rem auto;
-    border: 5px solid #52445F;
-    padding: 1rem;
     position: relative;
-    
-    background: url("../images/summary-box-background.jpg") no-repeat left top/cover,
-        #c9baa8;
+
+    background: url("../images/summary-box-picture.png") no-repeat left top/contain,
+        rgba(172,172,172, 0.8);
 }
 
 #zen-summary p {
-    display: inline;
+    position: absolute;
+    left: 22%;
 
-    background-color: #000;
-
-    color: #FFF;
-    font-size: calc(1rem + 1vw);
-    line-height: 1.3em;
-    letter-spacing: 0.3rem;
+    font-size: calc(1rem + 0.5vw);
 }
 
 #zen-summary p:nth-child(2) {
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
+    bottom: 0%;
 }
 
-#zen-summary p a {
+#zen-summary a {
+    padding: 0 5px;
+
     background-color: #ff4d67;
 
     color: #ffd5a1;
     text-decoration: none;
     text-transform: uppercase;
-}
-
-#zen-summary a:hover {
-    text-decoration: underline dotted #52445f;
 }
 
 /* Main Content */
 
 #zen-preamble, #zen-supporting {
-    width: 50%;
-    /* margin-left: 200px; */
-    margin-left: 10.5%;
+    width: 40%;
+    margin-top: 0;
+    margin-left: 10%;
     float: left;
-    clear: left;
+}
+
+#zen-supporting {
+    margin-top: 0;
+    width: 40.1%; /* extra percentage makes zen-supporting go underneath zen-preamble */
 }
 
 #zen-preamble h3, #zen-supporting h3 {
+    margin-top: 0;
     margin-bottom: 1rem;
+    display: inline-block;
+
+    background: url("../images/content-header-background.png") no-repeat 2rem bottom/90% 1rem;
 
     font-weight: normal;
-    font-size: 2rem;
-    letter-spacing: 0.1em;
-}
-
-#zen-preamble h3, #zen-supporting h3 {
-    margin-bottom: 1rem;
-
-    background: url("../images/content-header-background.png") no-repeat 30px bottom/70% 1rem;
-
-    font-weight: normal;
-    font-size: 2rem;
+    font-size: 1.6rem;
     letter-spacing: 0.1em;
 }
 
 #zen-preamble p, #zen-supporting p {
-    margin-bottom: 10px;
-
     font-weight: normal;
     font-size: 1.2rem;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.15rem;
 }
 
-#zen-preamble a, #zen-supporting a {
-    background-color: #ff4d67;
-
-    color: #ffd5a1;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-#zen-preamble a:hover, #zen-supporting a:hover {
-    text-decoration: underline dotted #52445f;
-}
-
-
-@media screen and (max-width: 1179) {
-    #zen-preamble h3, #zen-supporting h3 {
-        background-image: none;
-        background: url("../images/content-header-background.png") no-repeat 30px bottom/40% 1rem;
-    }
-}
-
-/* Aside bar */
+/* Aside */
 
 aside {
     position: relative;
 }
 
-aside .wrapper {
+.wrapper {
     position: absolute;
-    right: 7%;
+    right: 5%;
 }
-
-/* #cd4666 - two side colors | #52445f - middle color | #ff4d67 main color*/
 
 #design-selection ul, #design-archives ul, #zen-resources ul {
     list-style-type: none;
@@ -269,8 +194,27 @@ aside .wrapper {
     font-style: italic;
 }
 
+.select, .archives, .resources {
+    padding-bottom: 20px;
+    text-align: center;
+
+    background: url("../temp.png") no-repeat;
+    background-size: 204.8px 102.4px;
+    background-position: center -20px;
+
+    font-weight: normal;
+    letter-spacing: 0.1rem;
+}
+
+#design-selection a, #design-archives a, #zen-resources a{
+    color: #ffd5a1;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+}
+
 .design-name, .designer-name {
-    /* padding-left: 15%; */
     color: #ffd5a1;
 
     font-style: normal;
@@ -285,23 +229,6 @@ aside .wrapper {
     white-space: pre;
 }
 
-#design-selection a, #design-archives a, #zen-resources a{
-    /* padding-left: 15%; */
-
-    /* color: #ffd5a1;
-    text-decoration: none;
-    text-transform: uppercase; */
-    text-decoration: none;
-}
-
-.select, .archives {
-    padding-bottom: 20px;
-    text-align: center;
-
-    background: url("../temp.png") no-repeat;
-    background-size: 204.8px 102.4px;
-    background-position: center -20px;
-
-    font-weight: normal;
-    letter-spacing: 0.1rem;
+.indicator {
+    color: #52445F;
 }
