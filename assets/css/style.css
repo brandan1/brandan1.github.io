@@ -179,12 +179,15 @@ aside {
 }
 
 #design-selection ul, #design-archives ul, #zen-resources ul {
+    padding-left: 0;
+
     list-style-type: none;
 }
 
 #design-selection li, #design-archives li, #zen-resources li {
     width: 300px;
     margin: 10px 0;
+    
     padding: 2rem 0.5rem 2rem 20%;
 
     background-image: linear-gradient(to right, #cd4666, #cd4666 5%, #52445f 5%, #52445f 8%, #cd4666 7%, #cd4666 15%, #ff4d67 15%, #ff4d67 100%);
@@ -231,4 +234,20 @@ aside {
 
 .indicator {
     color: #52445F;
+}
+
+/* Footer */
+/* div[role=contentinfo], footer */
+#zen-supporting {
+    position: relative;
+}
+footer {
+    width: 100%;
+    overflow:visible;
+    margin-right: 10%;
+    clear: both;
+    float: left;
+}
+
+footer a {
 }
