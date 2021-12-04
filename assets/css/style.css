@@ -296,10 +296,10 @@ p[role=contentinfo] {
     font-size: calc(1rem + 0.5vw);
 }
 
-p[role=contentinfo]::after {
+/* p[role=contentinfo]::after {
     content:"\a";
     white-space: pre;
-}
+} */
 
 p[role=contentinfo] a {
     padding: 0 5px;
@@ -313,11 +313,45 @@ p[role=contentinfo] a {
 
 footer {
     width: 100%;
-    position: relative;
-    background-color: red;
+    height: 300px;
+    padding-top: calc(11% - -3vw);
+    position: absolute;
+    left: 0;
+    text-align: center;
 }
 
 footer a {
-    position: absolute;
-    bottom: 0;
+    padding: 1rem 0;
+
+    color: transparent;
+    text-decoration: none;
+}
+
+.zen-validate-html {
+    background: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg") no-repeat center center/40px;
+}
+
+.zen-validate-css {
+    background: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg") no-repeat center center/40px;
+}
+
+.zen-license {
+    padding: 1rem 1rem;
+    background: url("https://creativecommons.org/images/deed/cc_icon_white_x2.png") no-repeat center center/40px;
+}
+
+.zen-accessibility {
+    padding: 1rem 0.2rem;
+    background: url("https://developer.apple.com/design/human-interface-guidelines/accessibility/images/accessibility-icon_2x.png") no-repeat center center/40px;
+}
+
+.zen-github {
+    padding: 1rem 0.8rem;
+    background: url("../images/github.png") no-repeat center center/40px;
+}
+
+@media screen and (min-width: 800px) {
+    p[role=contentinfo] {
+        font-size: 5rem;
+    }
 }
