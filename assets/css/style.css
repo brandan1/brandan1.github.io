@@ -46,7 +46,11 @@ body {
     padding-top: 33.3vh;
     padding-bottom: 1.57vh;
 
+    background-image: none;
+    background: url("../images/landpage-header-divider.png") no-repeat center 97%/calc(100px + 30vw) 7px;
+
     letter-spacing: 0.3rem;
+    
 }
 
 #zen-intro header h2, #zen-intro header h2 abbr {
@@ -413,9 +417,9 @@ footer a {
     }
 
     footer {
-        width: 53vw;
+        width: 65vw;
         position: absolute;
-        left: 25%;
+        left: 16%;
         bottom: -8.8%;
         text-align: center;
     }
@@ -425,18 +429,29 @@ footer a {
         clear: left;
     }
 
-    /* #zen-preamble {
-        width: 80%;
+}
+
+@media (max-width: 550px) {
+    #zen-intro header h1 {
+        font-size: calc(1rem + 3vw) !important;
     }
 
-    #zen-explanation, #zen-participation {
-        width: 190%;
+    #zen-intro header h2 {
+        font-size: calc(0.6rem + 0.8vw);
     }
-    
-    */
 }
 
 @media (min-width: 900px) {
+    #zen-summary {
+        height: 200px;
+    }
+
+    #zen-summary p {
+        font-size: 1.3rem;
+        line-height: 2rem;
+        letter-spacing: 0.3rem;
+    }
+
     #zen-preamble, #zen-supporting {
         width: 40%;
         margin-top: 0;
@@ -488,4 +503,26 @@ footer a {
         left: 0;
         text-align: center;
     }
+
+    #zen-intro header h1 {
+        background-image: none;
+        background: url("../images/landpage-header-divider.png") no-repeat center 98%/calc(100px + 30vw) 7px;
+        font-size: calc(1rem + 7vw);
+    }
+
+    #zen-intro header h2 {
+        font-size: calc(0.6rem + 0.8vw);
+    }
+}
+
+@media (max-height: 730px) {
+    #zen-intro header {
+        background-image: none;
+        background: url("../images/landpage-colored-vertical-sidebar.png") repeat-y,
+                    url("../images/landpage-colored-vertical-sidebar.png") repeat-y right top,
+                    url("../images/landpage-colored-horizontal-sidebar.png") repeat-x,
+                    url("../images/landpage-divider.png") repeat-x left bottom,
+                    #ff4d67;
+    }
+    
 }
