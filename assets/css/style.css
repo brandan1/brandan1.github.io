@@ -17,7 +17,6 @@ html {
 
 body {
   background-color: #333;
-  overflow-x: hidden;
 }
 
 /* Landing page */
@@ -62,7 +61,7 @@ body {
   /* > Main navbar */
 
 #landing-nav {
-  width: 100vw;
+  width: 100%;
 }
 
 #landing-nav ul {
