@@ -1,528 +1,221 @@
 /* Global Configuration */
 
 @font-face {
-    font-family: BLACK_BUBBLE;
-    src: url("../fonts/BLACK_BUBBLE.ttf");
+  font-family: "Norwester";
+  src: url("../fonts/norwester.otf");
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 
-    font-weight: normal;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 html {
-    font-size: 16px; /* Base font-size */
+  font-size: 16px; /* Base font-size */
 }
 
 body {
-    overflow-x: hidden;
-    background: /*url("../images/summary-box-background.jpg") no-repeat left bottom/contain,*/
-                #FFD5A1;
+  background-color: #333;
+  overflow-x: hidden;
 }
 
-/* Landpage */
+/* Landing page */
 
-#zen-intro header {
-    height: 85vh;
-    text-align: center;
+#brandan-landing {
+  -webkit-animation: LandpageTransition 51s ease infinite;
+  -moz-animation: LandpageTransition 51s ease infinite;
+  -o-animation: LandpageTransition 51s ease infinite;
+  animation: LandpageTransition 51s ease infinite;
 
-    background: url("../images/landpage-colored-vertical-sidebar.png") repeat-y,
-                url("../images/landpage-colored-vertical-sidebar.png") repeat-y right top,
-                url("../images/landpage-colored-horizontal-sidebar.png") repeat-x,
-                url("../images/landpage-scrollmore.png") no-repeat center 80%,
-                url("../images/landpage-divider.png") repeat-x left bottom,
-                #ff4d67;
+  height: 75vh;
 
-    color: #ffd5a1;
+  display: flex;
+  flex-flow: row wrap; /* flex-direction: row; flex-wrap: wrap; */
+  justify-content: space-around;
+
+  background: linear-gradient(270deg, #656cd9, #d94b58);
+  background-size: 400% 400%;
 }
 
-#zen-intro header h1, #zen-intro header h2 {
-    margin: 0;
+@-webkit-keyframes LandpageTransition {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 51%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes LandpageTransition {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 51%}
+  100%{background-position:0% 50%}
+}
+@-o-keyframes LandpageTransition {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 51%}
+  100%{background-position:0% 50%}
+}
+@keyframes LandpageTransition {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 51%}
+  100%{background-position:0% 50%}
 }
 
-#zen-intro header h1 {
-    padding-top: 33.3vh;
-    padding-bottom: 1.57vh;
+  /* > Main navbar */
 
-    background-image: none;
-    background: url("../images/landpage-header-divider.png") no-repeat center 97%/calc(100px + 30vw) 7px;
-
-    letter-spacing: 0.3rem;
-    
+#landing-nav {
+  width: 100%;
 }
 
-#zen-intro header h2, #zen-intro header h2 abbr {
-    font-family: BLACK_BUBBLE;
+#landing-nav ul {
+  text-align: right;
+
+  list-style-type: none;
 }
 
-#zen-intro header h2 abbr {
-    text-decoration: underline dotted #52445F;
+#landing-nav ul li {
+  margin: 1rem 2rem 0 0;
+
+  display: inline-block;
+
+  color: #FFF;
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
 }
 
-/* @media screen and (min-width: 0px) {
-    #zen-intro header h1 {
-        background-image: none;
-        background: url("../images/landpage-header-divider.png") no-repeat center 98%/calc(100px + 20vw) 5px;
-
-        font-size: 1rem;
-    }
-
-    #zen-intro header h2 {
-        font-size: 0.6rem;
-    }
+#landing-nav ul li:last-child {
+  padding: 0 4rem 0 0;
 }
 
-@media screen and (min-width: 400px) {
-    #zen-intro header h1 {
-        background-image: none;
-        background: url("../images/landpage-header-divider.png") no-repeat center 98%/calc(100px + 20vw) 7px;
-
-        font-size: calc(1rem + 3vw);
-    }
-
-    #zen-intro header h2 {
-        font-size: calc(0.6rem + 1vw);
-    }
-}
-
-@media screen and (min-width: 800px) {
-    #zen-intro header h1 {
-        background-image: none;
-        background: url("../images/landpage-header-divider.png") no-repeat center 97%/calc(100px + 20vw) 7px;
-
-        font-size: calc(1rem + 4vw);
-    }
-}
-
-@media screen and (max-height: 500px) {
-    #zen-intro header {
-        background-image: none;
-        background: url("../images/landpage-colored-vertical-sidebar.png") repeat-y,
-        url("../images/landpage-colored-vertical-sidebar.png") repeat-y right top,
-        url("../images/landpage-colored-horizontal-sidebar.png") repeat-x,
-        url("../images/landpage-divider.png") repeat-x left bottom,
-        #ff4d67;
-    }
+/* #landing-nav ul li:first-child, ul li:first-child + li {
+  margin: 0 1.2rem 0 0;
 } */
 
-/* Summary Box */
+  /* > Landing/header text */
 
-#zen-summary {
-    /* width: calc(200px - 10vw);
-    min-width: 1000px;
-    min-height: 200px;
-    margin: 1rem auto;
-    position: relative; */
+#landing-text h1 {
+  margin: 9rem 0 0 0;
+  padding: 0;
 
-    background: url("../images/summary-box-picture.png") no-repeat left top/contain,
-        rgba(172,172,172, 0.8);
+  color: #FFF;
+  font-weight: normal;
+  font-size: 6rem;
+  letter-spacing: 1rem;
 }
 
-#zen-summary p {
-    /* position: absolute; */
-    /* left: 22%;
+#landing-text p {
+  margin: 0;
+  padding: 0 0 0 0.5rem;
+  text-align: center;
 
-    font-size: calc(1rem + 0.5vw); */
+  color: #FFF;
+  font-style: italic;
 }
 
-#zen-summary p:nth-child(2) {
-    bottom: 0%;
+
+  /* > Floating mio! */
+
+#brandan-landing aside {
+  animation-name: MioFloating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+
+  margin: 5px 0 40px 30px;
 }
 
-#zen-summary a {
-    padding: 0 5px;
-
-    background-color: #ff4d67;
-
-    color: #ffd5a1;
-    text-decoration: none;
-    text-transform: uppercase;
+#brandan-landing aside img {
+  max-width: 25vw;
+  min-width: 200px;
 }
-/* 
-@media screen and (max-width: 1025px) {
-    #zen-summary {
-        width: 100%;
-        min-width: 90vw;
-        margin: 1rem auto;
-    }
 
-    #zen-summary p {
-        left: 225px;
-        font-size: calc(1rem + 0.2vw);
-    }
+@keyframes MioFloating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 30px); }
+  100%   { transform: translate(0, -0px); }   
+}
+
+/* About section */
+
+  /* > About cover */
+#brandan-about header {
+  height: 45vh;
+  text-align: center;
+
+  background: url("../images/about-header.png") no-repeat center 5rem,
+    url("../images/about-background.png") no-repeat left top/cover; /* no background? */
+}
+
+#brandan-about header h2 {
+  margin-top: 10rem;
+
+  display: inline-block;
+
+  background-color: #212121;
+
+  color: #FFF;
+  font-size: 4rem;
+  font-family: Norwester;
+  letter-spacing: 1rem;
+}
+
+/* > About content */
+
+#about-text {
+  /* background: #656cd9; */
+}
+
+#about-text p {
+  margin: 0;
+
+  display: inline-block;
+
+  background-color: #d94b58;
+
+  color: #FFF;
+  font-weight: bold;
+  font-size: 5rem;
+}
+
+/* #brandan-about {
+  width: 100%;
+  height: 45vh;
+  margin: 0 auto;
+
+  position: relative;
+
+  text-align: center;
+
+  background: url("../images/about-header.png") no-repeat center 5rem,
+    url("../images/about-background.png") no-repeat left top/cover;
+}
+
+#about-credits {
+  margin: 0;
+
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+
+  background-color: rgba(33, 33, 33, 0.7);
+}
+
+#about-credits p {
+  margin: 0;
+
+  color: #FFF;
+}
+
+#brandan-about header {
+  padding-top: 7rem;
+}
+
+#brandan-about header h2 {
+  padding: 10px;
+  display: inline-block;
+  background-color: #212121;
+
+  color: #FFF;
+  font-size: 4rem;
+  font-family: Norwester;
+  letter-spacing: 1rem;
 } */
-
-/* Main Content */
-
-/* #zen-preamble, #zen-supporting { !!!
-    width: 40%;
-    margin-top: 0;
-    margin-left: 10%;
-    float: left;
-}
-
-#zen-supporting {
-    margin-top: 0;
-    width: 40.1%;
-}
-
-#zen-preamble h3, #zen-supporting h3 {
-    margin-top: 0;
-    margin-bottom: 1rem;
-    display: inline-block;
-
-    background: url("../images/content-header-background.png") no-repeat 2rem bottom/90% 1rem;
-
-    font-weight: normal;
-    font-size: 1.6rem;
-    letter-spacing: 0.1em;
-}
-
-#zen-preamble p, #zen-supporting p {
-    font-weight: normal;
-    font-size: 1.2rem;
-    letter-spacing: 0.11rem;
-    line-height: 1.5rem;
-} */
-
-/* @media screen and (max-width: 1025px) {
-    #zen-preamble, #zen-supporting {
-        margin-left: 5%;
-        clear: left;
-    }
-} */
-
-/* Aside */
-
-/* aside {
-    position: relative;
-}
-
-.wrapper {
-    position: absolute;
-    right: 5%;
-} */
-
-#design-selection ul, #design-archives ul, #zen-resources ul {
-    padding-left: 0;
-
-    list-style-type: none;
-}
-
-#design-selection li, #design-archives li, #zen-resources li {
-    width: 300px;
-    margin: 10px 0;
-    
-    padding: 2rem 0.5rem 2rem 20%;
-
-    background-image: linear-gradient(to right, #cd4666, #cd4666 5%, #52445f 5%, #52445f 8%, #cd4666 7%, #cd4666 15%, #ff4d67 15%, #ff4d67 100%);
-
-    color: #52445f;
-    font-weight: bold;
-    font-style: italic;
-}
-
-.select, .archives, .resources {
-    padding-bottom: 20px;
-    text-align: center;
-
-    background: url("../temp.png") no-repeat;
-    background-size: 204.8px 102.4px;
-    background-position: center -20px;
-
-    font-weight: normal;
-    letter-spacing: 0.1rem;
-}
-
-#design-selection a, #design-archives a, #zen-resources a{
-    color: #ffd5a1;
-    font-style: normal;
-    font-weight: normal;
-    text-decoration: none;
-    letter-spacing: 0.1rem;
-}
-
-.design-name, .designer-name {
-    color: #ffd5a1;
-
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1.3rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-}
-
-.design-name:after {
-    content:"\a";
-    white-space: pre;
-}
-
-.indicator {
-    color: #52445F;
-}
-
-/* Footer */
-
-p[role=contentinfo] {
-    width: 100%;
-    height: 300px;
-    padding-top: 7%;
-    position: absolute;
-    left: 0;
-    text-align: center;
-    /* #cd4666, #ff4d67 */
-    background:  linear-gradient(to bottom, #ff4d67, #ff4d67 3%, #cd4666 3%, #cd4666 6%, #52445f 6%, #52445f 9%, rgba(0,0,0,0.6) 9%, rgba(0,0,0,0.5) 100%),
-                url("../images/summary-box-background.jpg") no-repeat left bottom/cover;
-    
-    color: #FFF;
-    font-size: calc(1rem + 0.5vw);
-}
-
-/* p[role=contentinfo]::after {
-    content:"\a";
-    white-space: pre;
-} */
-
-p[role=contentinfo] a {
-    padding: 0 5px;
-
-    background-color: #ff4d67;
-
-    color: #ffd5a1;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-/* footer {
-    width: 100%;
-    height: 300px;
-    padding-top: calc(10% - -3vw);
-    position: absolute;
-    left: 0;
-    text-align: center;
-} */
-
-footer a {
-    padding: 1rem 0;
-
-    color: transparent;
-    text-decoration: none;
-}
-
-.zen-validate-html {
-    background: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg") no-repeat center center/40px;
-}
-
-.zen-validate-css {
-    background: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg") no-repeat center center/40px;
-}
-
-.zen-license {
-    padding: 1rem 1rem;
-    background: url("https://creativecommons.org/images/deed/cc_icon_white_x2.png") no-repeat center center/40px;
-}
-
-.zen-accessibility {
-    padding: 1rem 0.2rem;
-    background: url("https://developer.apple.com/design/human-interface-guidelines/accessibility/images/accessibility-icon_2x.png") no-repeat center center/40px;
-}
-
-.zen-github {
-    padding: 1rem 0.8rem;
-    background: url("../images/github.png") no-repeat center center/40px;
-}
-
-/* Media Queries */
-
-@media (min-width: 0px) {
-    #zen-summary {
-        width: 100%;
-        min-width: 90vw;
-        min-height: 200px;
-        margin: 0 auto 1rem auto;
-        position: relative;
-
-        background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.5) 100%),
-        url("../images/summary-box-background.jpg") no-repeat left bottom/cover;
-    }
-
-    #zen-summary p {
-        position: absolute;
-        margin-right: 5%;
-        left: 5%;
-
-        background-color: #000;
-    
-        color: #FFF;
-        font-size: 0.8rem;
-        line-height: 1.4rem;
-        letter-spacing: 0.3rem;
-    }
-
-    /* Main Content */
-
-    #zen-preamble, #zen-supporting {
-        width: 80%;
-        margin: 5% auto;
-        /* width: 40%;
-        margin-top: 0;
-        margin-left: 10%;
-        float: left; */
-    }
-
-    #zen-preamble h3, #zen-supporting h3 {
-        display: inline-block;
-
-        background: url("../images/content-header-background.png") no-repeat 2rem bottom/90% 1rem;
-
-        font-weight: normal;
-        font-size: 1.6rem;
-        letter-spacing: 0.1em;
-    }
-
-    #zen-preamble p, #zen-supporting p {
-        font-weight: normal;
-        font-size: 1.2rem;
-        letter-spacing: 0.11rem;
-        line-height: 1.3rem;
-    }
-
-    /* Aside */
-
-    #design-selection li, #design-archives li, #zen-resources li {
-        margin: 10px auto;
-        padding-left: 65px;
-    }
-
-    /* Footer */
-    .page-wrapper {
-        position: relative;
-        /* min-height: 100vh; */
-    }
-    
-    p[role=contentinfo] {
-        /* position: absolute;
-        bottom: 0;
-        width: 100%;
-        text-align: center; */
-        position: absolute;
-        bottom: -10%;
-        width: 100%;
-        height: 20rem;  
-        margin: 0;
-        margin-top: 300px;
-        padding-top: 100px;
-    }
-
-    footer {
-        width: 65vw;
-        position: absolute;
-        left: 16%;
-        bottom: -8.8%;
-        text-align: center;
-    }
-
-    .wrapper {
-        position: static;
-        clear: left;
-    }
-
-}
-
-@media (max-width: 550px) {
-    #zen-intro header h1 {
-        font-size: calc(1rem + 3vw) !important;
-    }
-
-    #zen-intro header h2 {
-        font-size: calc(0.6rem + 0.8vw);
-    }
-}
-
-@media (min-width: 900px) {
-    #zen-summary {
-        height: 200px;
-    }
-
-    #zen-summary p {
-        font-size: 1.3rem;
-        line-height: 2rem;
-        letter-spacing: 0.3rem;
-    }
-
-    #zen-preamble, #zen-supporting {
-        width: 40%;
-        margin-top: 0;
-        margin-left: 10%;
-        float: left;
-    }
-    
-    #zen-preamble {
-        margin-bottom: 1px;
-    }
-    #zen-supporting {
-        margin-top: 0;
-        width: 40.1%;
-    }
-
-    aside {
-        position: relative;
-    }
-    
-    .wrapper {
-        position: absolute;
-        right: 5%;
-    }
-
-    #zen-requirements {
-        position: relative;
-    }
-
-    .page-wrapper {
-        position: static;
-    }
-    
-    p[role=contentinfo] {
-        position: absolute;
-        bottom: 0;
-        width: 100vw;
-        margin: -400px -27.2%;
-    }
-
-    #zen-supporting {
-        position: relative;
-        padding-bottom: 7%;
-    }
-
-    footer {
-        width: 100%;
-        margin-left: 50%;
-        position: absolute;
-        left: 0;
-        text-align: center;
-    }
-
-    #zen-intro header h1 {
-        background-image: none;
-        background: url("../images/landpage-header-divider.png") no-repeat center 98%/calc(100px + 30vw) 7px;
-        font-size: calc(1rem + 7vw);
-    }
-
-    #zen-intro header h2 {
-        font-size: calc(0.6rem + 0.8vw);
-    }
-}
-
-@media (max-height: 730px) {
-    #zen-intro header {
-        background-image: none;
-        background: url("../images/landpage-colored-vertical-sidebar.png") repeat-y,
-                    url("../images/landpage-colored-vertical-sidebar.png") repeat-y right top,
-                    url("../images/landpage-colored-horizontal-sidebar.png") repeat-x,
-                    url("../images/landpage-divider.png") repeat-x left bottom,
-                    #ff4d67;
-    }
-    
-}
