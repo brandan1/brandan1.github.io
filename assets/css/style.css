@@ -12,6 +12,8 @@
 }
 
 html {
+  scroll-behavior: smooth;
+
   font-size: 16px; /* Base font-size */
 }
 
@@ -79,6 +81,15 @@ body {
   font-size: 1.2rem;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
+}
+
+#landing-nav ul a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+#landing-nav ul a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 #landing-nav ul li:last-child {
