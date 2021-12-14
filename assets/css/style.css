@@ -62,7 +62,7 @@ body {
   /* > Main navbar */
 
 #landing-nav {
-  width: 100%;
+  width: 100vw;
 }
 
 #landing-nav ul {
