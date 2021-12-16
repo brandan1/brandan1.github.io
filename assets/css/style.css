@@ -2,8 +2,19 @@
 
 @font-face {
   font-family: "Norwester";
-  src: url("../fonts/norwester.otf");
+  src: url("../fonts/Norwester.otf");
 }
+
+@font-face {
+  font-family: "Alatsi";
+  src: url("../fonts/Alatsi-Regular.ttf");
+}
+
+@font-face {
+  font-family: "BLACK_BUBBLE";
+  src: url("../fonts/BLACK_BUBBLE.ttf");
+}
+
 
 * {
   box-sizing: border-box;
@@ -12,101 +23,82 @@
 }
 
 html {
-  scroll-behavior: smooth;
-
   font-size: 16px; /* Base font-size */
 }
 
 body {
-  background-color: #333;
-}
-
-/* Landing page */
-
-#brandan-landing {
-  -webkit-animation: LandpageTransition 51s ease infinite;
-  -moz-animation: LandpageTransition 51s ease infinite;
-  -o-animation: LandpageTransition 51s ease infinite;
-  animation: LandpageTransition 51s ease infinite;
-
-  height: 75vh;
-
-  display: flex;
-  flex-flow: row wrap; /* flex-direction: row; flex-wrap: wrap; */
-  justify-content: space-around;
+  -webkit-animation: bodyTransition 45s ease infinite;
+  -moz-animation: bodyTransition 45s ease infinite;
+  -o-animation: bodyTransition 45s ease infinite;
+  animation: bodyTransition 45s ease infinite;
 
   background: linear-gradient(270deg, #656cd9, #d94b58);
   background-size: 400% 400%;
 }
 
-@-webkit-keyframes LandpageTransition {
+@-webkit-keyframes bodyTransition {
   0%{background-position:0% 50%}
   50%{background-position:100% 51%}
   100%{background-position:0% 50%}
 }
-@-moz-keyframes LandpageTransition {
+@-moz-keyframes bodyTransition {
   0%{background-position:0% 50%}
   50%{background-position:100% 51%}
   100%{background-position:0% 50%}
 }
-@-o-keyframes LandpageTransition {
+@-o-keyframes bodyTransition {
   0%{background-position:0% 50%}
   50%{background-position:100% 51%}
   100%{background-position:0% 50%}
 }
-@keyframes LandpageTransition {
+@keyframes bodyTransition {
   0%{background-position:0% 50%}
   50%{background-position:100% 51%}
   100%{background-position:0% 50%}
 }
 
-  /* > Main navbar */
+/* Landing page */
 
-#landing-nav {
-  width: 100%;
-}
+/* > Main navbar */
 
 #landing-nav ul {
-  text-align: right;
-
+  margin-right: 3%;
   list-style-type: none;
 }
 
 #landing-nav ul li {
-  margin: 1rem 2rem 0 0;
+  padding: 0.2rem 1rem 1rem 1rem;
+  float: right;
 
-  display: inline-block;
-
-  color: #FFF;
   font-size: 1.2rem;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
 }
 
-#landing-nav ul a {
+#brandan-landing ul a {
   color: #FFF;
   text-decoration: none;
 }
 
-#landing-nav ul a:hover {
+#brandan-landing ul a:hover {
   background-color: rgba(0, 0, 0, 0.2);
-}
-
-#landing-nav ul li:last-child {
-  padding: 0 4rem 0 0;
-}
-
-/* #landing-nav ul li:first-child, ul li:first-child + li {
-  margin: 0 1.2rem 0 0;
-} */
-
-  /* > Landing/header text */
-
-#landing-text h1 {
-  margin: 9rem 0 0 0;
-  padding: 0;
 
   color: #FFF;
+  text-decoration: none;
+}
+
+/* > Header */
+
+#landing-text {
+  margin: 20% 0 0 10%;
+  float: left;
+
+  color: #FFF;
+}
+
+#landing-text h1 {
+  margin: 0;
+    
   font-weight: normal;
   font-size: 6rem;
   letter-spacing: 1rem;
@@ -114,15 +106,12 @@ body {
 
 #landing-text p {
   margin: 0;
-  padding: 0 0 0 0.5rem;
   text-align: center;
 
-  color: #FFF;
   font-style: italic;
 }
 
-
-  /* > Floating mio! */
+/* > Floating ball-eye thingy */
 
 #brandan-landing aside {
   animation-name: MioFloating;
@@ -130,7 +119,10 @@ body {
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 
-  margin: 5px 0 40px 30px;
+  margin: 10% 10% 0 0;
+
+  float: right;
+  clear: right;
 }
 
 #brandan-landing aside img {
@@ -144,88 +136,60 @@ body {
   100%   { transform: translate(0, -0px); }   
 }
 
-/* About section */
+/* Main footer */
 
-  /* > About cover */
-#brandan-about header {
-  height: 45vh;
-  text-align: center;
-
-  background: url("../images/about-header.png") no-repeat center 5rem,
-    url("../images/about-background.png") no-repeat left top/cover; /* no background? */
-}
-
-#brandan-about header h2 {
-  margin-top: 10rem;
-
-  display: inline-block;
-
-  background-color: #212121;
-
-  color: #FFF;
-  font-size: 4rem;
-  font-family: Norwester;
-  letter-spacing: 1rem;
-}
-
-/* > About content */
-
-#about-text {
-  /* background: #656cd9; */
-}
-
-#about-text p {
-  margin: 0;
-
-  display: inline-block;
-
-  background-color: #d94b58;
-
-  color: #FFF;
-  font-weight: bold;
-  font-size: 5rem;
-}
-
-/* #brandan-about {
+footer {
   width: 100%;
-  height: 45vh;
-  margin: 0 auto;
-
-  position: relative;
-
   text-align: center;
-
-  background: url("../images/about-header.png") no-repeat center 5rem,
-    url("../images/about-background.png") no-repeat left top/cover;
-}
-
-#about-credits {
-  margin: 0;
-
   position: absolute;
-  bottom: 0%;
-  left: 0%;
+  bottom: 0;
 
-  background-color: rgba(33, 33, 33, 0.7);
+  background: rgba(0,0,0, 0.2);
+
+  color: white;
 }
 
-#about-credits p {
-  margin: 0;
-
-  color: #FFF;
+footer p {
+  font-style: italic;
+  font-family: "Alatsi";
 }
 
-#brandan-about header {
-  padding-top: 7rem;
+/* Media Queries */
+
+/* > index.html */
+
+@media screen and (max-width: 1100px) {
+
+  /* Main navbar */
+
+  #landing-nav ul li {
+    margin: 0;
+    padding: 0.2rem 0.7rem 0.7rem 0.7rem;
+    font-size: calc(0.5rem + 1vw);
+  }
+
+  /* Header */
+
+  #landing-text {
+    width: 100%;
+    margin: 10% auto;
+    text-align: center;
+  }
+
+  #landing-text h1 {
+    font-size: calc(1rem + 7vw);
+  }
+
+  /* Floating ball-eye thingy */
+
+  #brandan-landing aside {
+    margin: 0;
+    float: none;
+  }
+
+  #brandan-landing aside img {
+    display: block;
+    margin: 0 auto;
+  }
+
 }
-
-#brandan-about header h2 {
-  padding: 10px;
-  display: inline-block;
-  background-color: #212121;
-
-  color: #FFF;
-  font-size: 4rem;
-  font-family: Norwester;
-  letter-spacing: 1rem;
-} */
