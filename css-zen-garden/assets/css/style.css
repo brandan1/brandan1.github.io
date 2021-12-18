@@ -1,0 +1,379 @@
+/* Global Configuration */
+
+@font-face {
+    font-family: BLACK_BUBBLE;
+    src: url("../fonts/BLACK_BUBBLE.ttf");
+}
+
+* {
+    box-sizing: border-box;
+
+    font-weight: normal;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+html {
+    font-size: 16px; /* Base font-size */
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #FFD5A1;
+}
+
+/* Landpage */
+
+#zen-intro header {
+    height: 85vh;
+    text-align: center;
+
+    background: url("../images/landpage-colored-vertical-sidebar.png") repeat-y,
+                url("../images/landpage-colored-vertical-sidebar.png") repeat-y right top,
+                url("../images/landpage-colored-horizontal-sidebar.png") repeat-x,
+                url("../images/landpage-scrollmore.png") no-repeat center 80%,
+                url("../images/landpage-divider.png") repeat-x left bottom,
+                #ff4d67;
+
+    color: #ffd5a1;
+}
+
+#zen-intro header h1, #zen-intro header h2 {
+    margin: 0;
+}
+
+#zen-intro header h1 {
+    padding-top: 33.3vh;
+    padding-bottom: 1.57vh;
+
+    background-image: none;
+    background: url("../images/landpage-header-divider.png") no-repeat center 97%/calc(100px + 30vw) 7px;
+
+    letter-spacing: 0.3rem;
+    
+}
+
+#zen-intro header h2, #zen-intro header h2 abbr {
+    font-family: BLACK_BUBBLE, Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+}
+
+#zen-intro header h2 abbr {
+    text-decoration: underline dotted #52445F;
+}
+
+/* Summary Box */
+
+#zen-summary p:nth-child(2) {
+    bottom: 0%;
+}
+
+#zen-summary a {
+    padding: 0 5px;
+
+    background-color: #ff4d67;
+
+    color: #ffd5a1;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* Aside */
+#design-selection ul, #design-archives ul, #zen-resources ul {
+    padding-left: 0;
+
+    list-style-type: none;
+}
+
+#design-selection li, #design-archives li, #zen-resources li {
+    width: 300px;
+    margin: 10px 0;
+    
+    padding: 2rem 0.5rem 2rem 20%;
+
+    background-image: linear-gradient(to right, #cd4666, #cd4666 5%, #52445f 5%, #52445f 8%, #cd4666 7%, #cd4666 15%, #ff4d67 15%, #ff4d67 100%);
+
+    color: #52445f;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.select, .archives, .resources {
+    padding-bottom: 20px;
+    text-align: center;
+
+    background: url("../images/aside-header.png") no-repeat;
+    background-size: 204.8px 102.4px;
+    background-position: center -20px;
+
+    font-weight: normal;
+    letter-spacing: 0.1rem;
+}
+
+#design-selection a, #design-archives a, #zen-resources a{
+    color: #ffd5a1;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+}
+
+.design-name, .designer-name {
+    color: #ffd5a1;
+
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.design-name:after {
+    content:"\a";
+    white-space: pre;
+}
+
+.indicator {
+    color: #52445F;
+}
+
+/* Footer */
+
+p[role=contentinfo] {
+    width: 100%;
+    height: 300px;
+    padding-top: 7%;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    /* #cd4666, #ff4d67 */
+    background:  linear-gradient(to bottom, #ff4d67, #ff4d67 3%, #cd4666 3%, #cd4666 6%, #52445f 6%, #52445f 9%, rgba(0,0,0,0.6) 9%, rgba(0,0,0,0.5) 100%),
+                url("../images/summary-box-background.jpg") no-repeat left bottom/cover;
+    
+    color: #FFF;
+    font-size: calc(1rem + 0.5vw);
+}
+
+p[role=contentinfo] a {
+    padding: 0 5px;
+
+    background-color: #ff4d67;
+
+    color: #ffd5a1;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+footer a {
+    padding: 1rem 0;
+
+    color: transparent;
+    text-decoration: none;
+}
+
+.zen-validate-html {
+    background: url("../images/html5.svg") no-repeat center center/40px;
+}
+
+.zen-validate-css {
+    background: url("../images/css3.svg") no-repeat center center/40px;
+}
+
+.zen-license {
+    padding: 1rem 1rem;
+    background: url("../images/creativecommons.png") no-repeat center center/40px;
+}
+
+.zen-accessibility {
+    padding: 1rem 0.2rem;
+    background: url("../images/accessibility.png") no-repeat center center/40px;
+}
+
+.zen-github {
+    padding: 1rem 0.8rem;
+    background: url("../images/github.png") no-repeat center center/40px;
+}
+
+/* Media Queries */
+
+@media (min-width: 0px) {
+    #zen-summary {
+        width: 100%;
+        min-width: 90vw;
+        min-height: 200px;
+        margin: 0 auto 1rem auto;
+        position: relative;
+
+        background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.5) 100%),
+        url("../images/summary-box-background.jpg") no-repeat left bottom/cover;
+    }
+
+    #zen-summary p {
+        position: absolute;
+        margin-right: 5%;
+        left: 5%;
+
+        background-color: #000;
+    
+        color: #FFF;
+        font-size: 0.8rem;
+        line-height: 1.4rem;
+        letter-spacing: 0.3rem;
+    }
+
+    /* Main Content */
+
+    #zen-preamble, #zen-supporting {
+        width: 80%;
+        margin: 5% auto;
+    }
+
+    #zen-preamble h3, #zen-supporting h3 {
+        display: inline-block;
+
+        background: url("../images/content-header-background.png") no-repeat 2rem bottom/90% 1rem;
+
+        font-weight: normal;
+        font-size: 1.6rem;
+        letter-spacing: 0.1em;
+    }
+
+    #zen-preamble p, #zen-supporting p {
+        font-weight: normal;
+        font-size: 1.2rem;
+        letter-spacing: 0.11rem;
+        line-height: 1.3rem;
+    }
+
+    /* Aside */
+
+    #design-selection li, #design-archives li, #zen-resources li {
+        margin: 10px auto;
+        padding-left: 65px;
+    }
+
+    /* Footer */
+    .page-wrapper {
+        position: relative;
+    }
+    
+    p[role=contentinfo] {
+        position: absolute;
+        bottom: -10%;
+        width: 100%;
+        height: 20rem;  
+        margin: 0;
+        margin-top: 300px;
+        padding-top: 100px;
+        border: none;
+    }
+
+    footer {
+        width: 65vw;
+        position: absolute;
+        left: 16%;
+        bottom: -8.8%;
+        text-align: center;
+    }
+
+    .wrapper {
+        position: static;
+        clear: left;
+    }
+
+}
+
+@media (max-width: 550px) {
+    #zen-intro header h1 {
+        font-size: calc(1rem + 3vw) !important;
+    }
+
+    #zen-intro header h2 {
+        font-size: calc(0.6rem + 0.8vw);
+    }
+}
+
+@media (min-width: 900px) {
+    #zen-summary {
+        height: 200px;
+    }
+
+    #zen-summary p {
+        font-size: 1.3rem;
+        line-height: 2rem;
+        letter-spacing: 0.3rem;
+    }
+
+    #zen-preamble, #zen-supporting {
+        width: 40%;
+        margin-top: 0;
+        margin-left: 10%;
+        float: left;
+    }
+    
+    #zen-preamble {
+        margin-bottom: 1px;
+    }
+    #zen-supporting {
+        margin-top: 0;
+        width: 40.1%;
+    }
+
+    aside {
+        position: relative;
+    }
+    
+    .wrapper {
+        position: absolute;
+        right: 5%;
+    }
+
+    #zen-requirements {
+        position: relative;
+    }
+
+    .page-wrapper {
+        position: static;
+    }
+    
+    p[role=contentinfo] {
+        position: absolute;
+        bottom: 0;
+        width: 100vw;
+        margin: -400px -27.2%;
+    }
+
+    #zen-supporting {
+        position: relative;
+        padding-bottom: 7%;
+    }
+
+    footer {
+        width: 100%;
+        margin-left: 50%;
+        position: absolute;
+        left: 0;
+        text-align: center;
+    }
+
+    #zen-intro header h1 {
+        background-image: none;
+        background: url("../images/landpage-header-divider.png") no-repeat center 98%/calc(100px + 30vw) 7px;
+        font-size: calc(1rem + 7vw);
+    }
+
+    #zen-intro header h2 {
+        font-size: calc(0.6rem + 0.8vw);
+    }
+}
+
+@media (max-height: 730px) {
+    #zen-intro header {
+        background-image: none;
+        background: url("../images/landpage-colored-vertical-sidebar.png") repeat-y,
+                    url("../images/landpage-colored-vertical-sidebar.png") repeat-y right top,
+                    url("../images/landpage-colored-horizontal-sidebar.png") repeat-x,
+                    url("../images/landpage-divider.png") repeat-x left bottom,
+                    #ff4d67;
+    }
+    
+}
