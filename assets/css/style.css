@@ -137,10 +137,10 @@ body {
 }
 
 @keyframes MioFloating {
-    0% { transform: translate(0,  0px); }
-    50%  { transform: translate(-10px, 20px); }
-    100%   { transform: translate(-0px, -0px); }   
-  }
+    0% {transform: translate(0,  0px);}
+    50% {transform: translate(-10px, 20px);}
+    100% {transform: translate(-0px, -0px);}   
+}
 
 #content-aside img { /* Height was acting strange, spent an hour trying to fix without using flex, decided to use img element instead. */
     max-width: 25vw;
