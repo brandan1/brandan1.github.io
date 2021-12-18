@@ -1,0 +1,81 @@
+/* Configuration */
+
+@font-face {
+  font-family: "Norwester";
+  src: url("../fonts/Norwester.otf");
+}
+
+@font-face {
+  font-family: "Alatsi";
+  src: url("../fonts/Alatsi-Regular.ttf");
+}
+
+@font-face {
+  font-family: "BLACK_BUBBLE";
+  src: url("../fonts/BLACK_BUBBLE.ttf");
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+* {
+  box-sizing: border-box;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html {
+  /* overflow-x: hidden; */
+  font-size: 16px; /* Base font-size */
+}
+
+body {
+  background-color: #333;
+}
+
+/* Global styles (across all files) */
+
+/* > Page container */
+
+/* > Main navbar */
+
+#main-header {
+  width: 10vw;
+  height: 100vh;
+  position: relative;
+  float: left;
+
+  background-color: tomato;
+}
+
+#main-nav {
+
+}
+
+#main-nav ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  list-style-type: none;
+}
+
+#main-footer {
+  position: absolute;
+  bottom: 0;
+}
+
+#main-footer p {
+  margin: 0;
+}
+
+/* > Page content */
+
+#container-content {
+  width: auto;
+  float: left;
+}
+

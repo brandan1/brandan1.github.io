@@ -1,0 +1,424 @@
+/* Configuration */
+
+/* > Fonts */
+
+@font-face {
+    font-family: "Norwester";
+    src: url("../fonts/Norwester.otf");
+}
+  
+@font-face {
+    font-family: "Alatsi";
+    src: url("../fonts/Alatsi-Regular.ttf");
+}
+  
+@font-face {
+    font-family: "BLACK_BUBBLE";
+    src: url("../fonts/BLACK_BUBBLE.ttf");
+}
+
+/* > Utility classes and global, general styling rules */
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.highlighter { /* Used for content/textual links, not things like nav or project previews */
+    padding: 0 0.3rem;
+
+    background-color: #656cd9;
+}
+
+.dual-footer {
+    width: 100%;
+    text-align: center;
+
+    background: rgba(0,0,0, 0.2);
+
+    color: #FFF;
+}
+
+.dual-footer p {
+    margin: 0;
+    padding: 1rem;
+}
+
+* {
+    box-sizing: border-box;
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html {
+    overflow-x: hidden; /* Ran into problems */
+
+    font-size: 16px; /* Base font size */
+}
+
+body {
+    animation: bodyTransition 45s ease infinite;
+    
+    background: linear-gradient(270deg, #656cd9, #d94b58);
+    background-size: 400% 400%;
+
+}
+
+@keyframes bodyTransition {
+    0% {background-position:0% 50%}
+    50% {background-position:100% 51%}
+    100% {background-position:0% 50%}
+}
+
+/* Main navbar */
+
+#main-nav ul {
+    margin-right: 4rem;
+
+    list-style-type: none;
+}
+
+.main-nav-item {
+    padding: 0.2rem 1rem 1rem 1rem;
+    float: right;
+}
+
+.main-nav-item a {
+    color: #FFF;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    text-decoration: none;
+}
+
+.main-nav-item a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+} 
+
+/* index.html landing page */
+
+/* > Container */
+
+#content-header {
+    margin: 20% 0 0 10%;
+    float: left;
+
+    color: #FFF;
+}
+
+/* > Header */
+
+#content-header h1 {
+    margin: 0;
+
+    font-weight: normal;
+    font-size: 6rem;
+    letter-spacing: 1rem;
+}
+
+#content-header p {
+    margin: 0;
+    text-align: center;
+  
+    font-style: italic;
+}
+
+/* > Aside */
+
+#content-aside {
+    animation-name: MioFloating;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+
+    margin: 10% 10% 0 0;
+    float: right;
+}
+
+@keyframes MioFloating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(-10px, 20px); }
+    100%   { transform: translate(-0px, -0px); }   
+  }
+
+#content-aside img { /* Height was acting strange, spent an hour trying to fix without using flex, decided to use img element instead. */
+    max-width: 25vw;
+    min-width: 200px;
+}
+
+/* > Footer */
+
+#home-footer { /* Using floats on one page (index.html) and flex on the others (about.html and contact.html) made it so that I needed to style the footers differently so there was no bouncing-glitch. There is probably a unified way to do it, but I couldn't figure it out. */
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+
+    background: rgba(0,0,0, 0.2);
+
+    color: #FFF;
+}
+
+/* about.html */
+
+/* > Header */
+
+#about-section-header {
+    text-align: center;
+
+    background: url("../images/header/header-about-overlay.png") no-repeat center center,url("../images/header/header-background.png") no-repeat left -1100px;
+}
+
+#about-section-header-logo {
+    margin: 7rem;
+    padding: 0 1rem;
+    display: inline-block;
+  
+    background-color: #222;
+  
+    color: #FFF;
+    font-size: 4rem;
+    font-family: "Norwester";
+    letter-spacing: 0.4rem;
+}
+
+
+/* > Container */
+
+#about-section-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.about-item {
+    flex: 1;
+
+    background-color: rgba(70, 70, 70, 0.4);
+
+    color: #FFF;
+}
+
+.about-item:nth-child(odd) {
+    background-color: rgba(37, 37, 37, 0.7);
+}
+
+.about-item a {
+    color: #FFF;
+}
+
+.about-item-header {
+    text-align: center;
+
+    color: #FFF;
+    font-family: "Alatsi";
+    letter-spacing: 0.2rem;
+}
+
+.about-item-text {
+    padding: 0 1rem;
+    text-align: justify;
+  
+    color: #FFF;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.8rem;
+    text-indent: 3rem;
+}
+
+.about-item-image {
+    max-width: 300px;
+    padding: 2rem;
+}
+
+/* #about-section-footer {
+    width: 100%;
+    text-align: center;
+
+    background: rgba(0,0,0, 0.2);
+
+    color: #FFF;
+}
+
+#about-section-footer p {
+    margin: 0;
+    padding: 1rem;
+} */
+
+/* > CSS Zen Garden */
+
+#css-zen-garden {
+    margin: 1rem;
+    padding: 5rem;
+    text-align: center;
+  
+    cursor: pointer;
+  
+    /* With many images already being loaded, like the ones in the header and the knowledge container, it seemed like a good idea to create the CSS Zen Garden preview in pure CSS instead of more images */
+    background: linear-gradient(to right, #cc4464 0%, #cc4464 3%, #54445c 3%, #54445c 6%, #cc4464 6%, #cc4464 9%, rgba(0,0,0,0) 9%, rgba(0,0,0,0) 100%),
+    linear-gradient(to left, #cc4464 0%, #cc4464 3%, #54445c 3%, #54445c 6%, #cc4464 6%, #cc4464 9%, rgba(0,0,0,0) 9%, rgba(0,0,0,0) 100%),
+    linear-gradient(to bottom, #cc4464 0%, #cc4464 6%, #54445c 6%, #54445c 12%, #cc4464 12%, #cc4464 18%, rgba(0,0,0,0) 18%, rgba(0,0,0,0) 100%),
+    linear-gradient(to top, #cc4464 0%, #cc4464 6%, #54445c 6%, #54445c 12%, #cc4464 12%, #cc4464 18%, rgba(0,0,0,0) 18%, rgba(0,0,0,0) 100%), #ff4d67;
+}
+
+#css-zen-garden-header {
+    margin-bottom: 1rem;
+    border-bottom: 8px solid #52445f;
+  
+    color: #FFD5A1;
+    font-weight: normal;
+    font-size: 3rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+  
+#css-zen-garden-subheader {
+    margin: 0;
+
+    color: #FFD5A1;
+    font-family: BLACK_BUBBLE;
+}
+
+#css-zen-garden-underline {
+    font-family: BLACK_BUBBLE;
+    border-bottom: 2px dotted #52445f;
+}
+  
+
+
+/* contact.html */
+
+/* > Header */
+
+#contact-section-header {
+    text-align: center;
+
+    background: url("../images/header/header-contact-overlay.png") no-repeat center center/370.3px 161px,url("../images/header/header-background.png") no-repeat left -50px;
+}
+
+#contact-section-header-logo {
+    margin: 7rem;
+    padding: 0 1rem;
+    display: inline-block;
+  
+    background-color: #222;
+  
+    color: #FFF;
+    font-size: 4rem;
+    font-family: "Norwester";
+    letter-spacing: 0.4rem;
+}
+
+/* Content */
+
+#contact-section-content {
+    width: 70%;
+    margin: 2rem auto;
+    padding: 2rem;
+
+    background-color: rgba(37, 37, 37, 0.7);
+}
+
+.contact-section-content-text {
+    text-align: center;
+
+    color: #FFF;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.8rem;
+    text-indent: 3rem;
+}
+
+.contact-section-content-text a {
+    color: #FFF;
+}
+
+label {
+    color: #FFF;
+    font-family: "Alatsi";
+}
+
+input {
+    margin-bottom: 1rem;
+}
+
+input[type=submit] {
+    border: 3px #222 solid;
+
+    cursor: pointer;
+
+    background-color: #333;
+
+    color: #FFF;
+}
+
+textarea {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+
+}
+
+/* #contact-section-footer {
+    width: 100%;
+    text-align: center;
+
+    background: rgba(0,0,0, 0.2);
+
+    color: #FFF;
+}
+
+#contact-section-footer p {
+    margin: 0;
+    padding: 1rem;
+} */
+
+
+
+
+/* Media Queries */
+
+@media screen and (max-width: 1100px) {
+
+    /*  <*>.html */
+
+    .main-nav-item a {
+        margin: 0;
+        padding: 0.2rem 0.7rem 0.7rem 0.7rem;
+        font-size: calc(0.3rem + 1vw);
+    }
+
+    /* index.html */
+
+    #content-header {
+        width: 100%;
+        margin: 10% auto;
+        text-align: center;
+    }
+
+    #content-header h1 {
+        font-size: calc(1rem + 7vw);
+    }
+
+    #content-aside {
+        margin: 0;
+        float: none;
+    }
+
+    #content-aside img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* about.html */
+
+    #about-section-content {
+        flex-flow: column wrap;
+    }
+    
+    .about-item:nth-child(3) { 
+        display: inline-block !important;
+        text-align: center;
+    }
+}
