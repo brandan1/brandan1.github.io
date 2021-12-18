@@ -233,20 +233,6 @@ body {
     padding: 2rem;
 }
 
-/* #about-section-footer {
-    width: 100%;
-    text-align: center;
-
-    background: rgba(0,0,0, 0.2);
-
-    color: #FFF;
-}
-
-#about-section-footer p {
-    margin: 0;
-    padding: 1rem;
-} */
-
 /* > CSS Zen Garden */
 
 #css-zen-garden {
@@ -254,13 +240,15 @@ body {
     padding: 5rem;
     text-align: center;
   
-    cursor: pointer;
-  
     /* With many images already being loaded, like the ones in the header and the knowledge container, it seemed like a good idea to create the CSS Zen Garden preview in pure CSS instead of more images */
     background: linear-gradient(to right, #cc4464 0%, #cc4464 3%, #54445c 3%, #54445c 6%, #cc4464 6%, #cc4464 9%, rgba(0,0,0,0) 9%, rgba(0,0,0,0) 100%),
     linear-gradient(to left, #cc4464 0%, #cc4464 3%, #54445c 3%, #54445c 6%, #cc4464 6%, #cc4464 9%, rgba(0,0,0,0) 9%, rgba(0,0,0,0) 100%),
     linear-gradient(to bottom, #cc4464 0%, #cc4464 6%, #54445c 6%, #54445c 12%, #cc4464 12%, #cc4464 18%, rgba(0,0,0,0) 18%, rgba(0,0,0,0) 100%),
     linear-gradient(to top, #cc4464 0%, #cc4464 6%, #54445c 6%, #54445c 12%, #cc4464 12%, #cc4464 18%, rgba(0,0,0,0) 18%, rgba(0,0,0,0) 100%), #ff4d67;
+}
+
+#css-zen-garden-link {
+    text-decoration: none;
 }
 
 #css-zen-garden-header {
@@ -359,23 +347,6 @@ textarea {
     min-height: 200px;
 
 }
-
-/* #contact-section-footer {
-    width: 100%;
-    text-align: center;
-
-    background: rgba(0,0,0, 0.2);
-
-    color: #FFF;
-}
-
-#contact-section-footer p {
-    margin: 0;
-    padding: 1rem;
-} */
-
-
-
 
 /* Media Queries */
 
